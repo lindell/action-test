@@ -1,11 +1,10 @@
 name: A workflow for my Hello World file
 on: [issues, pull_request]
 jobs:
-  build:
-    name: Hello world action
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: lindell/label-commenter
+      - uses: lindell/label-commenter@master
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
